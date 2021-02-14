@@ -31,4 +31,4 @@ A generic notification system that consumes a message and sends it to across the
       }
   
 ## Working
-The notification system pushes the message to ThreadPoolTaskExecutor's blocking and will be picked up asynchronously by another thead which will consume the message and send it to the appropriate channel. Please note that both channels are mocked right now. Adding new channels would require implmenting Channel class and adding the channel to channelTypeEnum and ChannelFactory.
+The notification system pushes the message to ThreadPoolTaskExecutor's blocking queue and will be picked up asynchronously by another thead which will consume the message and send it to the appropriate channel. Please note that both channels are mocked right now. Adding new channels would require implementing Channel class and adding the new channel to channelTypeEnum and ChannelFactory.
